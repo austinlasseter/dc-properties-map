@@ -6,11 +6,6 @@ from dash.dependencies import Input, Output, State
 import plotly.figure_factory as ff
 import pandas as pd
 
-# Read in the USA counties shape files
-from urllib.request import urlopen
-import json
-with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
-    counties = json.load(response)
 
 ########### Define a few variables ######
 
@@ -63,7 +58,7 @@ def getFig(value):
 ########### Layout
 
 app.layout = html.Div(children=[
-    html.H1('DC Propertiez'),
+    html.H1('DC Properties'),
     # Dropdowns
     html.Div(children=[
         # left side
